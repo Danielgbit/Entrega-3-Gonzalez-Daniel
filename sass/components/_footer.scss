@@ -1,0 +1,92 @@
+
+
+
+footer{
+
+    width: 100%;
+    background-color:$bg-tercero;
+
+    .grupo-1{
+
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        @extend %display-grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 50px;
+        padding: 45px 0px;
+
+        .box{
+
+            margin-bottom: 25px;
+            font-size: nth($fontsize, 1 );
+            color: $bg-primario;
+
+            figure{
+                
+                @extend %wh-porcentaje-100;
+                @extend %flex-center;
+                color: $bg-secundario;
+                margin-bottom: 25px;
+                font-size: nth($fontsize, 1 );
+            }
+
+            h6{
+                color: $bg-secundario;
+                margin-bottom: 25px;
+                font-size:nth($list: fontsize, $n:1 ) ;
+            }
+
+            p{
+                
+                color: $bg-secundario;
+                margin-bottom: 10px;
+
+            }
+
+
+            .redsocial{
+
+                @extend %display-flex;
+                width: 100px;
+                line-height: 45px;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+
+.box{
+    figure{
+        .imagenfooter{
+            width: 100px;
+            border-radius:150px;
+        }
+    }
+}
+
+
+
+.grupo-2{
+
+    background-color: $bg-primario;
+    color: $bg-secundario;
+    padding: 15px 10px;
+    text-align: center;
+
+     small{
+
+        font-size: nth($fontsize, 4 );
+    }
+    
+}
+
+
+@media screen and (max-width:800px){
+    footer .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+}}

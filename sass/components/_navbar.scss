@@ -1,0 +1,209 @@
+
+
+:root {
+  --background: $bg-primario;
+}
+
+
+body {
+	margin: 0;
+  padding: 0;
+}
+
+
+
+header {
+  background-color: var(--background);
+  background-image: url(/img/Imagen-Fondo-2.jpg);
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  height:10vh;
+  z-index: 10000;
+  
+}
+
+.logo {
+  grid-column: 2 / span 1;
+  width: 55px;
+  border-radius: 150px;
+  margin-top: 10px;
+}
+
+
+
+.text-logo{
+  @extend %flex-center;
+  margin-left: -330px;
+  color: $bg-secundario;
+  font-family:$ff-principal;
+  font-size: nth($fontsize, 1 );
+  @extend %text-decoration;
+
+    &:hover{
+      color: $bg-secundario;
+      text-decoration: line-through;
+    }
+
+
+
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--background);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform .3s ease-in-out .4s;
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+    li {
+      margin-bottom: 1em;
+      margin-left: 1em;
+      
+      a {
+        color: $bg-secundario;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: nth($fontsize, 4 );
+        transition: opacity .3s ease-out;
+        opacity: 0;
+        padding: 10px;
+        font-family:$ff-principal;
+
+        
+        &:hover {
+          color: $bg-secundario;
+        }
+      }
+    }
+  }
+}
+
+.nav-toggle {
+  
+  display: none;
+  
+  &:checked ~ nav {
+    transform: scale(1, 1);
+    transition: transform .5s ease-in-out;
+    a {
+      opacity: 1;
+      transition: opacity .5s ease-out .3s;
+    }
+  }
+  
+  &-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    
+    span, span::before, span::after {
+      display: block;
+      background: $bg-secundario;
+      height: 2px;
+      width: 2em;
+      border-radius: 2px;
+      position: relative;
+    }
+    
+    span::before, span::after {
+      position: absolute;
+      content: ""
+    }
+    
+    span::before {
+      bottom: 7px;
+    }
+    
+    span::after {
+      top: 7px;
+    }
+  }
+  
+  &:checked ~ &-label {
+    
+  }
+}
+
+
+@media only screen and (max-width : 1485px){
+
+header .text-logo{
+    display: none;
+}
+
+}
+
+@media screen and (min-width: 784px) {
+  .nav-toggle-label {
+    display: none;
+  }
+  
+  
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    
+    .logo {
+      grid-column: 1 / span 1;
+      width: 55px;
+      margin-top: 10px;
+      border-radius: 150px;
+      margin-left: 30px;
+    }
+    
+    nav {
+      all: unset;
+      grid-column: 3 / 4;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      
+      ul {
+        display: flex;
+        
+        li {
+          margin-bottom: 0;
+          margin-left: 3em;
+          a {
+            opacity: 1;
+            position: relative;
+            font-weight: bold;
+            
+            &::before {
+              content: "";
+              display: block;
+              height: 5px;
+              background: $bg-secundario;
+              position: absolute;
+              top: -.75em;
+              left: 0;
+              right: 0;
+              transform: scale(0, 1);
+              transition: transform .2s ease-out;
+              transform-origin: left;
+            }
+            
+            &:hover::before {
+              transform: scale(1,1);
+            }
+          }
+        }
+      }
+    }
+  }
+}

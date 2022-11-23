@@ -1,0 +1,51 @@
+
+
+%flex-primario{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+%flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+%flex-column-direction{
+    display: flex;
+    flex-direction: column;
+}
+
+
+%flex-cuarto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+%flex-quinto{
+    
+    display: flex;
+    flex-direction: column
+}
+
+
+%flex-sexto{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+%display-flex{
+    display: flex;
+}
+
+
+%display-none{
+    display: none;
+}

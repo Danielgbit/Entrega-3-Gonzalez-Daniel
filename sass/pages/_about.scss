@@ -1,0 +1,135 @@
+
+
+ a:hover,
+ a:focus,
+ a:active {
+     @extend %text-decoration;
+     outline: none;
+ }
+ 
+ a,
+ a:active,
+ a:focus {
+     color: $bg-tercero;
+     @extend %text-decoration;
+ }
+ 
+ ul {
+     margin: 0;
+     padding: 0;
+     list-style: none;
+ }
+
+ img {
+@extend %wh-max-100;
+height: auto;
+}
+
+
+
+.title{
+position: relative;
+display: block;
+font-size: nth($fontsize, 7);
+line-height: 24px;
+color: $bg-secundario;
+font-weight: 800;
+margin-bottom: 15px;
+}
+
+
+
+.list-style-one{
+position:relative;
+}
+
+
+
+.btn-style-one{
+position: relative;
+display: inline-block;
+font-size: 17px;
+line-height: 30px;
+color: $bg-secundario;
+padding: 10px 30px;
+font-weight: 600;
+overflow: hidden;
+letter-spacing: 0.02em;
+background-color: $bg-primario;
+}
+
+.btn-style-one:hover{
+background-color: $bg-tercero;
+color: $bg-secundario;
+}
+
+.about-section{
+position: relative;
+padding: 120px 0 70px;
+}
+
+
+.about-section .content-column{
+position: relative;
+margin-bottom: 50px;
+}
+
+.about-section .content-column .inner-column{
+position: relative;
+padding-left: 30px;
+}
+
+.about-section .text{
+margin-bottom: 20px;
+font-size: nth($fontsize,9 );
+line-height: 26px;
+color: $bg-secundario;
+font-weight: 400;
+position: relative;
+margin-top: 35px;
+}
+
+
+.about-section .image-column .text-layer{
+position: absolute;
+right: -110px;
+top: 50%;
+font-size: 325px;
+line-height: 1em;
+color: $bg-secundario;
+margin-top: -175px;
+font-weight: 500;
+}
+
+.about-section .image-column .inner-column{
+position: relative;
+padding-left: 80px;
+padding-bottom: 0px;
+}
+
+.about-section .image-column .inner-column:before{
+content: '';
+position: absolute;
+width: calc(50% + 80px);
+height: calc(100% + 160px);
+top: -80px;
+left: -44px;
+background: transparent;
+border: 44px solid $bg-primario
+}
+
+.about-section .image-column .image-1{
+position: relative;
+}
+
+.about-section .image-column .image-1 img{
+box-shadow: 0 30px 50px $bg-primario;
+border-radius: 20px;
+}
+
+
+.body-about{
+  background-image: url(/img/Body-about.jpg);
+}
+
+

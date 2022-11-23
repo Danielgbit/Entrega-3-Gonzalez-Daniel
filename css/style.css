@@ -1,0 +1,1001 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100&display=swap");
+.text-logo, footer .grupo-1 .box figure, body .background .app-title .logocontacto, .two-column div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.screen-body-item.left {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .grupo-1 .box .redsocial, .screen-body, .screen-header-right, body .background .app-title, body .background {
+  display: flex;
+}
+
+footer .grupo-1, .grid {
+  display: grid;
+}
+
+.text-logo, a, a:hover,
+a:focus,
+a:active, body .container .buttom-3, body .container .buttom-2, body .container .buttom-1, body .container .buttom, .reserva {
+  text-decoration: none;
+}
+
+footer .grupo-1 .box figure, .grid article i, .slider .slide-track .slide img, .imagen {
+  width: 100%;
+  height: 100%;
+}
+
+img, .grid article img, .imagenfondoservicios {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.slider .slide-track .slide, .slider {
+  height: 500px;
+  width: 100%;
+}
+
+body .background .app-title .logocontacto {
+  width: 100px;
+  height: 100px;
+}
+
+.header-contact, .header-about, .header-services {
+  width: 100%;
+  height: 600PX;
+}
+
+h3 {
+  padding-top: 10px;
+}
+
+.desc {
+  color: #4d4d4f;
+  padding: 15px;
+}
+
+.reserva {
+  color: white;
+  font-size: 30px;
+}
+.reserva:hover {
+  text-decoration: line-through;
+  color: goldenrod;
+}
+
+.icono-shop {
+  padding-top: 30px;
+  width: 80px;
+}
+
+.body-home {
+  background-color: black;
+}
+
+.heading {
+  font-weight: 600;
+  font-size: 200px;
+}
+
+.two-column {
+  display: flex;
+  flex-direction: row;
+  margin: 150px 75px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.two-column div {
+  flex: 1;
+  text-align: center;
+}
+
+.imagen {
+  object-fit: contain;
+  padding: 10px;
+  max-width: 854px;
+  max-height: 480px;
+}
+
+@media (max-width: 1632px) {
+  .heading {
+    font-weight: 600;
+    font-size: 5rem;
+  }
+}
+@media (max-width: 1200px) {
+  .two-column {
+    display: flex;
+    flex-direction: column;
+    margin: 75px;
+  }
+  .heading {
+    font-weight: 600;
+    font-size: 4rem;
+  }
+}
+@media (max-width: 1200px) and (max-width: 600px) {
+  body {
+    padding-top: 50px;
+  }
+  .heading {
+    font-weight: 600;
+    font-size: 3rem;
+  }
+  .two-column {
+    margin: 75px 25px;
+  }
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1750px);
+  }
+}
+::before {
+  left: 0;
+  top: 0;
+}
+
+::after {
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider {
+  background: white;
+  box-shadow: 0 10px 20px -5px black;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  animation: 40s;
+}
+.slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: 3500px;
+}
+@media screen and (max-width: 520px) {
+  .contenedor-flex1 {
+    flex-direction: column;
+  }
+  .imagenfondo {
+    margin-bottom: 0px;
+  }
+  .contenedor-texto-body {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 600px) {
+  .contenedor-texto-body {
+    padding: 40px;
+  }
+  .imagenfondo {
+    padding: 0;
+  }
+}
+.imagenfondoservicios {
+  opacity: 0.8;
+  filter: grayscale(100%);
+}
+
+.body-servicios {
+  background-color: black;
+}
+
+body {
+  padding-top: 20px;
+}
+body h2 {
+  color: black;
+  text-align: center;
+  padding: 30px;
+  font-weight: 800;
+}
+body .container {
+  padding-bottom: 100px;
+}
+body .container .buttom {
+  padding: 5px;
+  color: black;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  border-radius: 150px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+body .container .buttom:hover {
+  color: goldenrod;
+  text-decoration: line-through;
+  background: black;
+}
+body .container .buttom-1 {
+  padding: 5px;
+  margin-top: 60px;
+  color: black;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  text-transform: uppercase;
+  border-radius: 150px;
+}
+body .container .buttom-1:hover {
+  color: goldenrod;
+  text-decoration: line-through;
+  background: black;
+}
+body .container .buttom-2 {
+  padding: 5px;
+  margin-top: 37px;
+  color: black;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  border-radius: 150px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+body .container .buttom-2:hover {
+  color: goldenrod;
+  text-decoration: line-through;
+  background: black;
+}
+body .container .buttom-3 {
+  padding: 5px;
+  margin-top: 10px;
+  color: black;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  border-radius: 150px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+body .container .buttom-3:hover {
+  color: goldenrod;
+  text-decoration: line-through;
+  background: black;
+}
+
+.grid {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
+}
+.grid .text {
+  padding: 16px 20px 30px;
+  color: white;
+}
+.grid .text p {
+  margin-top: 40px;
+}
+.grid .btn {
+  margin-top: 20px;
+}
+.grid article {
+  border: 1px solid white;
+  box-shadow: 2px 2px 6px 0px black;
+  text-align: center;
+}
+.grid article i {
+  font-size: 48px;
+  line-height: 70px;
+  border: 6px solid white;
+  border-radius: 50%;
+  background-color: black;
+  text-align: center;
+  color: white;
+  margin-top: -36px;
+}
+a:hover,
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:active,
+a:focus {
+  color: #4d4d4f;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  height: auto;
+}
+
+.title {
+  position: relative;
+  display: block;
+  font-size: 30px;
+  line-height: 24px;
+  color: white;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.list-style-one {
+  position: relative;
+}
+
+.btn-style-one {
+  position: relative;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 30px;
+  color: white;
+  padding: 10px 30px;
+  font-weight: 600;
+  overflow: hidden;
+  letter-spacing: 0.02em;
+  background-color: black;
+}
+
+.btn-style-one:hover {
+  background-color: #4d4d4f;
+  color: white;
+}
+
+.about-section {
+  position: relative;
+  padding: 120px 0 70px;
+}
+
+.about-section .content-column {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.about-section .content-column .inner-column {
+  position: relative;
+  padding-left: 30px;
+}
+
+.about-section .text {
+  margin-bottom: 20px;
+  font-size: 17px;
+  line-height: 26px;
+  color: white;
+  font-weight: 400;
+  position: relative;
+  margin-top: 35px;
+}
+
+.about-section .image-column .text-layer {
+  position: absolute;
+  right: -110px;
+  top: 50%;
+  font-size: 325px;
+  line-height: 1em;
+  color: white;
+  margin-top: -175px;
+  font-weight: 500;
+}
+
+.about-section .image-column .inner-column {
+  position: relative;
+  padding-left: 80px;
+  padding-bottom: 0px;
+}
+
+.about-section .image-column .inner-column:before {
+  content: "";
+  position: absolute;
+  width: calc(50% + 80px);
+  height: calc(100% + 160px);
+  top: -80px;
+  left: -44px;
+  background: transparent;
+  border: 44px solid black;
+}
+
+.about-section .image-column .image-1 {
+  position: relative;
+}
+
+.about-section .image-column .image-1 img {
+  box-shadow: 0 30px 50px black;
+  border-radius: 20px;
+}
+
+.body-about {
+  background-image: url(/img/Body-about.jpg);
+}
+
+.text-logo, footer .grupo-1 .box figure, body .background .app-title .logocontacto, .two-column div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.screen-body-item.left {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .grupo-1 .box .redsocial, .screen-body, .screen-header-right, body .background .app-title, body .background {
+  display: flex;
+}
+
+footer .grupo-1, .grid {
+  display: grid;
+}
+
+.text-logo, .reserva, body .container .buttom, body .container .buttom-1, body .container .buttom-2, body .container .buttom-3, a:hover,
+a:focus,
+a:active, a {
+  text-decoration: none;
+}
+
+footer .grupo-1 .box figure, .imagen, .slider .slide-track .slide img, .grid article i {
+  width: 100%;
+  height: 100%;
+}
+
+.imagenfondoservicios, .grid article img, img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.slider, .slider .slide-track .slide {
+  height: 500px;
+  width: 100%;
+}
+
+body .background .app-title .logocontacto {
+  width: 100px;
+  height: 100px;
+}
+
+.header-contact, .header-about, .header-services {
+  width: 100%;
+  height: 600PX;
+}
+
+body .background {
+  min-height: 100vh;
+}
+body .background .app-title {
+  flex-direction: column;
+  position: relative;
+  color: white;
+  font-size: 26px;
+}
+body .background .app-title:after {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 25px;
+  height: 4px;
+  background: white;
+}
+body .background .app-title .logocontacto {
+  color: white;
+  margin-top: 10px;
+  margin-left: 20px;
+  border-radius: 150px;
+}
+
+body button input {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.container {
+  flex: 0 1 700px;
+  margin: auto;
+  padding: 10px;
+}
+.container .screen {
+  position: relative;
+  background: black;
+  border-radius: 15px;
+}
+.container .screen:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px black;
+  z-index: -1;
+}
+
+.screen-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: #4d4d4f;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.screen-header .screen-header-left {
+  margin-right: auto;
+}
+.screen-header .screen-header-left .screen-header-button.close {
+  background: goldenrod;
+}
+.screen-header .screen-header-left .screen-header-button.maximize {
+  background: #74c54f;
+}
+.screen-header .screen-header-left .screen-header-button.minimize {
+  background: #74c54f;
+}
+.screen-header .screen-header-left .screen-header-button {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 3px;
+  border-radius: 8px;
+  background: white;
+}
+
+.screen-header-right .screen-header-ellipsis {
+  width: 3px;
+  height: 3px;
+  margin-left: 2px;
+  border-radius: 8px;
+  background: #4d4d4f;
+}
+
+.screen-body .screen-body-item {
+  flex: 1;
+  padding: 50px;
+}
+
+.app-form-group {
+  margin-bottom: 15px;
+}
+
+.app-form-group.message {
+  margin-top: 40px;
+}
+
+.app-form-group.buttons {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.app-form-control {
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #4d4d4f;
+  color: white;
+  font-size: 13px;
+  text-transform: uppercase;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.app-form-control::placeholder {
+  color: #4d4d4f;
+}
+
+.app-form-control:focus {
+  border-bottom-color: white;
+}
+
+.app-form-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+  outline: none;
+}
+
+.app-form-button:hover {
+  color: goldenrod;
+}
+
+.dribbble {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+}
+
+@media screen and (max-width: 520px) {
+  .screen-body {
+    flex-direction: column;
+  }
+  .screen-body-item.left {
+    margin-bottom: 30px;
+  }
+  .app-title {
+    flex-direction: row;
+  }
+  .app-title span {
+    margin-right: 12px;
+  }
+  .app-title:after {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .screen-body {
+    padding: 40px;
+  }
+  .screen-body-item {
+    padding: 0;
+  }
+}
+.body-contact {
+  background-image: url(/img/Imagen-Fondo-2.jpg);
+}
+
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #4d4d4f;
+  z-index: 100;
+}
+
+.my-float {
+  margin-top: 16px;
+}
+
+footer {
+  width: 100%;
+  background-color: #4d4d4f;
+}
+footer .grupo-1 {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0px;
+}
+footer .grupo-1 .box {
+  margin-bottom: 25px;
+  font-size: 20px;
+  color: black;
+}
+footer .grupo-1 .box figure {
+  color: white;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+footer .grupo-1 .box h6 {
+  color: white;
+  margin-bottom: 25px;
+  font-size: fontsize;
+}
+footer .grupo-1 .box p {
+  color: white;
+  margin-bottom: 10px;
+}
+footer .grupo-1 .box .redsocial {
+  width: 100px;
+  line-height: 45px;
+  margin-right: 10px;
+}
+
+.box figure .imagenfooter {
+  width: 100px;
+  border-radius: 150px;
+}
+
+.grupo-2 {
+  background-color: black;
+  color: white;
+  padding: 15px 10px;
+  text-align: center;
+}
+.grupo-2 small {
+  font-size: 15px;
+}
+
+@media screen and (max-width: 800px) {
+  footer .grupo-1 {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
+  }
+}
+:root {
+  --background: $bg-primario;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--background);
+  background-image: url(/img/Imagen-Fondo-2.jpg);
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  height: 10vh;
+  z-index: 10000;
+}
+
+.logo {
+  grid-column: 2/span 1;
+  width: 55px;
+  border-radius: 150px;
+  margin-top: 10px;
+}
+
+.text-logo {
+  margin-left: -330px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+.text-logo:hover {
+  color: white;
+  text-decoration: line-through;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--background);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 0.3s ease-in-out 0.4s;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav ul li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: opacity 0.3s ease-out;
+  opacity: 0;
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+}
+nav ul li a:hover {
+  color: white;
+}
+
+.nav-toggle {
+  display: none;
+}
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+  transition: transform 0.5s ease-in-out;
+}
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 0.5s ease-out 0.3s;
+}
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.nav-toggle-label span, .nav-toggle-label span::before, .nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+.nav-toggle-label span::before, .nav-toggle-label span::after {
+  position: absolute;
+  content: "";
+}
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+.nav-toggle-label span::after {
+  top: 7px;
+}
+@media only screen and (max-width: 1485px) {
+  header .text-logo {
+    display: none;
+  }
+}
+@media screen and (min-width: 784px) {
+  .nav-toggle-label {
+    display: none;
+  }
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+  header .logo {
+    grid-column: 1/span 1;
+    width: 55px;
+    margin-top: 10px;
+    border-radius: 150px;
+    margin-left: 30px;
+  }
+  header nav {
+    all: unset;
+    grid-column: 3/4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  header nav ul {
+    display: flex;
+  }
+  header nav ul li {
+    margin-bottom: 0;
+    margin-left: 3em;
+  }
+  header nav ul li a {
+    opacity: 1;
+    position: relative;
+    font-weight: bold;
+  }
+  header nav ul li a::before {
+    content: "";
+    display: block;
+    height: 5px;
+    background: white;
+    position: absolute;
+    top: -0.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform 0.2s ease-out;
+    transform-origin: left;
+  }
+  header nav ul li a:hover::before {
+    transform: scale(1, 1);
+  }
+}
+.large-header {
+  position: relative;
+  width: 100%;
+  height: 600PX;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(/img/Imagen-Fondo.jpg);
+}
+
+.header-services {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(/img/Fondo-servicios.jpg);
+  opacity: 0.8;
+}
+
+.header-about {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(/img/Fondo-about.jpg);
+  opacity: 0.9;
+}
+
+.header-contact {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(/img/Fondo-contacto.jpg);
+  opacity: 0.9;
+}
+
+.main-title {
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  font-size: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+  .demo-1 .main-title {
+    font-size: 3em;
+  }
+}
+.two-column div, body .background .app-title .logocontacto, footer .grupo-1 .box figure, .text-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.screen-body-item.left {
+  display: flex;
+  flex-direction: column;
+}
+
+body .background, body .background .app-title, .screen-header-right, .screen-body, footer .grupo-1 .box .redsocial {
+  display: flex;
+}
+
+.grid, footer .grupo-1 {
+  display: grid;
+}
+
+.reserva, body .container .buttom, body .container .buttom-1, body .container .buttom-2, body .container .buttom-3, a:hover,
+a:focus,
+a:active, a, .text-logo {
+  text-decoration: none;
+}
+
+.imagen, .slider .slide-track .slide img, .grid article i, footer .grupo-1 .box figure {
+  width: 100%;
+  height: 100%;
+}
+
+.imagenfondoservicios, .grid article img, img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.slider, .slider .slide-track .slide {
+  height: 500px;
+  width: 100%;
+}
+
+body .background .app-title .logocontacto {
+  width: 100px;
+  height: 100px;
+}
+
+.header-services, .header-about, .header-contact {
+  width: 100%;
+  height: 600PX;
+}
+
+/*# sourceMappingURL=style.css.map */

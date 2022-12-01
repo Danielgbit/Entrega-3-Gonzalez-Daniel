@@ -20,6 +20,7 @@
     <meta property="og:locale" content="Medellin_Colombia">
     
     <title>Barbershop</title>
+    <script src="https://kit.fontawesome.com/f2c1799cf6.js" title="Link FontAwesome" crossorigin="anonymous"></script>
     <!--Favicon-->
     <link rel="shortcut icon" href="/img/Logo.ico" type="image/x-icon" title="Link Favicon">
     <!--Enlace CSS-->
@@ -27,19 +28,22 @@
     <!--Enlace Boostrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   </head>
-  <body>
+<body>
 
     <!--NAV-->
     
     <header>
-      <img class="logo" src="/img/Logo.png" alt="Logo barberia Mandala">
+      <div class="content-logo-nav">
+        <img class="logo" src="/img/Logo.png" alt="Logo barberia Mandala">
         <a class="text-logo" href="/contact.html" title="redireccionador a contacto Mandala">Mandala</a>
+      </div>
       <input type="checkbox" id="nav-toggle" class="nav-toggle" />
       <nav>
         <ul>
           <li><a href="/index.html" title="Enlace sección inicio">Home</a></li>
           <li><a href="/services.html"title="Enlace sección servicios">Servicios</a></li>
           <li><a href="/about.html" title="Enlace sección nosotros">Nosotros</a></li>
+          <li><a href="/Products.html" title="Enlace sección Productos">Productos</a></li>
           <li><a href="/contact.html" title="Enlace sección contacto">Contacto</a></li>
         </ul>
       </nav>
@@ -48,90 +52,121 @@
       </label>
     </header>
 
-    <!--INICIO BODY-->
+    <!--INICIO BODY HEADER-->
+
 
     <div class="header-services">
-      <canvas id="demo-canvas"></canvas>
+        <canvas id="demo-canvas"></canvas>
         <h1 class="main-title">SERVICIOS</h1>
     </div>
 
     <!--FIN SECCION-->
 
-    <!--INICIO SEGUNDA SECCION-->
+    <!--INICIO SECCION SERVICIOS-->
 
-<section class="body-servicios">
+<section class="body-services">
 
-    <h2>NUESTRO MENU</h2>
+  <section class="pb-5 pt-5" id="services">
     <div class="container">
-      <main class="grid">
-        <article>
-          <img src="/img/servicios1.png" alt="Muestra tratamiento profesional coloristas Mandala">
-          <div class="text">
-            <h3>TINTURA</h3>
-            <p>Cubrimos esas canas que tanto te molestan o le damos un nuevo look a tu cabello.</p>
-            <a href="/contact.html" class="buttom-1" title="Enlace contacto Mandala" >Reserva</a>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="center-heading">
+                    <h2 class="section-title">NUESTRO MENU</h2>
+                </div>
+            </div>
+            <div>
           </div>
-        </article>
-        <article>
-          <img src="/img/servicios2.png" alt="Corte cabello para hombres realizado por profesionales">
-          <div class="text">
-            <h3>CORTE</h3>
-            <p>Usando máquina y tijeras para alcanzar tu look preferido, incluye afeitada de nuca cera moldeadora y shampoo.</p>
-            <a href="/contact.html" class="buttom-2" title="Enlace contacto Mandala">Reserva</a>
-          </div>
-        </article>
-        <article>
-          <img src="/img/Servicios3.png" alt="Spa facial relajacion medellin colombia">
-          <div class="text">
-            <h3>SPA FACIAL</h3>
-            <p>Vive la revolución del Vapor Ozono utilizando esta nueva tecnología lograrás una afeitada con beneficios como abrir los poros y ablandar los vellos faciales.</p>
-            <a href="/contact.html"class="buttom-3" title="Enlace contacto Mandala">Reserva</a>
-          </div>
-        </article>
-        <article>
-          <img src="/img/Servicios4.png" alt="Barba premium servicio para hombres de verdad">
-          <div class="text">
-            <h3>BARBA</h3>
-            <p>Comenzamos con una perfecta pulida de tu barba, luego la agradable sensación de nuestra espuma y toalla caliente para sentir como empieza a deslizarse la cuchilla en en tu piel..</p>
-            <a href="/contact.html"class="buttom"title="Enlace contacto Mandala">Reserva</a>
-          </div>
-        </article>
-      </main>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <a href="https://crear.wa.link/" title="redireccionador whatsapp" class="services-small-item">
+                    <div>
+                        <img class="icon" src="/img/Tintura.png" alt="Servicio de tintura por estilistas profesionales">
+                    </div>
+
+                      <h3 class="services-title">TINTURA</h3>
+                          <p class="text-1">Cubrimos esas canas que tanto te molestan o le damos un nuevo look a tu cabello. </p>
+                    <div class="button">
+                          <i class="fa-brands fa-whatsapp" title="Icono Whatsapp"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <a href="https://crear.wa.link/" title="redireccionador whatsapp" class="services-small-item">
+                    <div>
+                       <img class="icon" src="/img/Corte.png" alt="Servicio de corte de cabello para caballero premium">
+                    </div>
+                    <h3 class="services-title">CORTE</h3>
+                    <p class="text-2">Usando máquina y tijeras para alcanzar tu look preferido, incluye afeitada de nuca cera moldeadora y shampoo. </p>
+                    <div class="button">
+                      <i class="fa-brands fa-whatsapp" title="Icono Whatsapp"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <a href="https://crear.wa.link/" title="redireccionador whatsapp" class="services-small-item">
+                    <div>
+                        <img class="icon" src="/img/Spa.png" alt="Servicio de Spa facial relajacion exfoliacion ">
+                    </div>
+                    <h3 class="services-title">SPA FACIAL</h3>
+                    <p class="text-3">Vive la revolución del Vapor Ozono utilizando esta nueva tecnología lograrás una afeitada con beneficios como abrir los poros y ablandar los vellos faciales. </p>
+                    <div class="button">
+                      <i class="fa-brands fa-whatsapp" title="Icono Whatsapp"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <a href="https://crear.wa.link/" title="redireccionador whatsapp" class="services-small-item">
+                    <div>
+                        <img class="icon" src="/img/Barba.png" alt="Servicio de barba clasica para caballero">
+                    </div>
+                    <h3 class="services-title">BARBA</h3>
+                    <p class="text-4">Comenzamos con una perfecta pulida de tu barba, luego la agradable sensación de nuestra espuma y toalla caliente para sentir como empieza a deslizarse la cuchilla en en tu piel.. </p>
+                    <div class="button">
+                      <i class="fa-brands fa-whatsapp" title="Icono Whatsapp"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
-
-    <!--FIN SEGUNDA SECCION-->
-    
-
-    <!--INICIO SECCION FOOTER-->
-    <footer>
-      <div class="grupo-1">
-        <div class="box">
-          <figure>
-            <a href="/contact.html" title="Enlace contacto Mandala"><img class="imagenfooter" src="/img/Logo.png" alt="Logo barberia Mandala"></a>
-          </figure>
-        </div>
-        <div class="box">
-          <h6>SOBRE NOSOTROS</h6>
-          <P>Somos mas que un equipo, somos una familia enfocada en
-            ofrecer confianza y tranquilidad al genero masculino, nuestro establecimiento hace honor a la geometría sagrada 
-            de ahi salió "MANDALA"-BarberShop siendo asi un espacio de calma y relajación un lugar donde nuestros clientes salen renovados.</P>
-          <p>No solo somos una barberia
-            somos un estilo de vida.</p>
-        </div>
-        <div class="box">
-          <h6>SIGUENOS</h6>
-          <div class="redsocial">
-            <a href="https://github.com/Danielgbit/Segunda-pre-entrega-CODER.git" title="Link github personal"><img src="/img/github.png" alt="Icono github"></a>
-            <a href="https://goo.gl/maps/TVYEpce9By96cRbW7" title="Ubicacion barberia Mandala" ><img src="/img/local.png" alt="Icono ubicacion barberia Mandala"></a>
-          </div>
-        </div>
-      </div>
-      <div class="grupo-2">
-        <small>&copy; 2022 <b>MANDALA</b> - Todos los derechos resevados.</small>
-      </div>
-    </footer>
-
+  </section>
 </section>
+
+  <!--FIN SECCION SERVICIOS-->
+  
+  <!--INICIO SECCION FOOTER-->
+
+  <footer>
+    <div class="grupo-1">
+      <div class="container-logo">
+        <figure>
+          <a href="/contact.html" title="Redireccionador contacto Mandala"><img class="imagenfooter" src="/img/Logo.png" alt="Logo barberia Mandala"></a>
+        </figure>
+      </div>
+      <div class="box">
+        <h3>SOBRE NOSOTROS</h3>
+        <P>Somos mas que un equipo, somos una familia enfocada en
+          ofrecer confianza y tranquilidad al genero masculino, nuestro establecimiento hace honor a la geometría sagrada 
+          de ahi salió "MANDALA"-BarberShop siendo asi un espacio de calma y relajación un lugar donde nuestros clientes salen renovados.</P>
+        <p>No solo somos una barberia
+          somos un estilo de vida.</p>
+      </div>
+      <div class="box">
+        <h3>SIGUENOS</h3>
+        <div class="redsocial">
+          <a href="https://github.com/Danielgbit/Segunda-pre-entrega-CODER.git" title="Link github personal"><img class="iconos" src="/img/github.png" alt="Icono github"></a>
+          <a href="https://goo.gl/maps/TVYEpce9By96cRbW7" title="Ubicacion barberia Mandala" ><img class="iconos" src="/img/local.png" alt="Icono ubicacion barberia Mandala"></a>
+        </div>
+      </div>
+    </div>
+    <div class="grupo-2">
+      <small>&copy; 2022 <b>MANDALA</b> - Todos los derechos resevados.</small>
+    </div>
+  </footer>
+<!--FIN FOOTER-->
+
+<!--LINK BOOSTRAP-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-  </body>
+</body>
 </html>

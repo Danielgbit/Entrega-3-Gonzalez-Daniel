@@ -49,3 +49,18 @@
 %display-none{
     display: none;
 }
+
+
+%display-aling{
+    display: flex;
+    align-items: center;
+}
+
+
+%display-space{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}

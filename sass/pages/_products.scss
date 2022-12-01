@@ -1,0 +1,188 @@
+
+
+
+.body-products{
+    background: linear-gradient(270deg, #1b1707, #88846c);
+    @extend %flex-center;
+    padding-top: 20px;
+
+    .wrapper {
+      max-width: 1000px;
+      font-family: $ff-principal;
+      margin: auto auto;
+      padding: 1em;
+      margin-top: 30px;
+      padding-bottom: 100px;
+
+      
+      
+      h1 {
+        color: $bg-secundario;
+        margin-top: 10%;
+        padding: 40px;
+        padding-bottom: 90px;
+        @extend %text-center;
+        @extend %text-tranform;
+        font-weight: 900;
+      }
+
+
+          .tarjetas {
+            @extend %grid-one;
+            gap: 2rem;
+
+            
+            .tarjetas__titulo {
+              font-size: nth($fontsize, 12 );
+              grid-row: span 1;
+              color: $bg-secundario;
+              font-size: nth($fontsize, 7 );
+          
+            }
+
+            .tarjetas__precio {
+              grid-row: span 1;
+              font-size: nth($fontsize, 12 );
+              font-weight: 900;
+
+
+              .price {
+                @extend %text-center;
+                padding-top: 170px;
+                color: $bg-secundario;
+                font-size: nth($fontsize, 1 );
+              }
+              
+            }
+
+            .iva {
+              font-size: nth($fontsize, 13 );
+              font-weight: 300;
+              color: $bg-secundario;
+              
+            }
+
+
+                .tarjetas__item-1 {
+                  @include products;
+                  background-image: url(/img/Product-cera.jpg);
+                  margin:20px;
+                  height: 430px;
+                  background-position: center;
+                
+                  @for $i from 1 through 3 {
+                    &:nth-child(#{$i}n) {
+                      animation-delay: #{$i * 0.2}s;
+                    }
+                  }
+                
+                  &:hover {
+                    transform: translate(0, -1.5rem) rotate(-3deg) scale(1.3);
+                  }
+                }
+
+
+                .tarjetas__item-2 {
+                  @include products;
+                  background-image: url(/img/Product-shampoo.jpg);
+                  margin:20px;
+                  background-position: center;
+                
+                  @for $i from 1 through 3 {
+                    &:nth-child(#{$i}n) {
+                      animation-delay: #{$i * 0.2}s;
+                    }
+                  }
+                
+                  &:hover {
+                    transform: translate(0, -1.5rem) rotate(-3deg) scale(1.3);
+                  }
+                }
+
+
+                .tarjetas__item-3 {
+                  @include products;
+                  background-image: url(/img/Product-tonico.jpg);
+                  margin:20px;
+                  background-position: center;
+                  @for $i from 1 through 3 {
+                    &:nth-child(#{$i}n) {
+                      animation-delay: #{$i * 0.2}s;
+                    }
+                  }
+                
+                  &:hover {
+                    transform: translate(0, -1.5rem) rotate(-3deg) scale(1.3);
+                  }
+                }
+
+          }
+      
+    }
+
+}
+
+  
+// Animaciones Cart
+
+  
+  @keyframes fade-in-up {
+    0% {
+      transform: translatey(100%);
+      opacity: 0%;
+    }
+  
+    100% {
+      transform: translatey(0);
+      opacity: 100%;
+    }
+  }
+  
+
+ 
+  .carrito{
+    position:map-get($position, relative );
+    @include medicion;
+    margin: auto;
+    @extend %text-decoration;
+    cursor: pointer;
+    border: 1px solid $bg-cuarto;
+    border-radius: 8px;
+    height:2.8em;
+    width:10em;
+    padding: 0;
+    outline: none;
+    overflow: hidden;
+    color: $bg-cuarto;
+    transition: color 0.3s 0.1s ease-out;
+    @extend %text-center;
+    line-height: 250%;
+    
+        &::before{
+          position:map-get($position, absolute );
+          @include medicion;
+          margin: auto;
+          content:'';
+          border-radius: 50%;
+          display: block;
+          width: 10em*2;
+          height: 10em*2;
+          line-height: 10em*2;
+          left: 10em/2;
+          @extend %text-center;
+          transition: box-shadow 0.5s ease-out;
+          z-index: -1;
+        }
+    
+          &:hover{
+
+            color: $bg-secundario;
+
+                &::before{
+
+                box-shadow:inset 0 0 0 10em rgba($bg-cuarto,1);
+
+                }
+          }
+  }
+  

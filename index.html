@@ -25,8 +25,6 @@
     <link rel="shortcut icon" href="/img/Logo.ico" type="image/x-icon" title="Link Favicon">
     <!--Link CSS-->
     <link rel="stylesheet" href="/css/style.css" title="Link CSS">
-    <!--Link Font-Awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" title="Link Font-Awesome">
     <!--Link Boostrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"  title="Link Boostrap" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   </head>
@@ -36,14 +34,17 @@
 <!--NAV-->
 
 <header>
-  <img class="logo" src="/img/Logo.png" alt="Logo barberia Mandala">
+  <div class="content-logo-nav">
+    <img class="logo" src="/img/Logo.png" alt="Logo barberia Mandala">
     <a class="text-logo" href="/contact.html" title="redireccionador a contacto Mandala">Mandala</a>
+  </div>
   <input type="checkbox" id="nav-toggle" class="nav-toggle" />
   <nav>
     <ul>
       <li><a href="/index.html" title="Enlace sección inicio">Home</a></li>
       <li><a href="/services.html"title="Enlace sección servicios">Servicios</a></li>
       <li><a href="/about.html" title="Enlace sección nosotros">Nosotros</a></li>
+      <li><a href="/Products.html" title="Enlace sección Productos">Productos</a></li>
       <li><a href="/contact.html" title="Enlace sección contacto">Contacto</a></li>
     </ul>
   </nav>
@@ -52,59 +53,60 @@
   </label>
 </header>
 
+
 <!--FIN NAVBAR-->   
     
-<!--INICIO BODY-->
+<!--INICIO BODY HEADER-->
     
     <div id="large-header" class="large-header">
       <canvas id="demo-canvas"></canvas>
         <h1 class="main-title">HOME</h1>
     </div>
 
-<!--INICIO SEGUNDA SECCION HORARIOS-->
+<!--INICIO SEGUNDA SECCION INFO HORARIOS-->
 
     <section class="two-column">
       <div>
         <span>
       <p class="heading">Horario</p>
-      <h3>Lunes y viernes</h3>
+        <h2>Lunes y viernes</h2>
         <p class="desc">10.00-am / 8.00-pm</p>
-              <h3>Sabados</h3>
+              <h2>Sabados</h2>
               <p class="desc">9.00-am / 10.00-pm</p>
-              <h3>Festivos</h3>
+              <h2>Festivos</h2>
               <p class="desc">11.00-am / 6.30-pm</p>
-              <h3><a class="reserva" href="/contact.html" title="Enlace contacto">Reservar ahora</a></h3>
+                  <h2><a class="reserva" href="/contact.html" title="Enlace contacto">Reservar ahora</a></h2>
               <a class="desc" href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202."
                title="redireccionador a Api whatsapp">
                <img class="icono-shop" src="/img/Icon-shop.png" alt="Icono de whatsapp"></a>
           </span>
       </div>
-      <div>
+      <div class="border-image">
         <img class="imagen" src="/img/Imagen-Fondo-2.jpg" alt="Muestra de atencion y comodidad de nuestros clientes">
       </div>
     </section>
 
 
-<!--FIN SEGUNDA SECCION-->
+<!--FIN SEGUNDA SECCION INFO HORARIOS-->
 
 <!--SECCION CARROUSEL-->
 
     <div class="slider">
       <div class="slide-track">
         <div class="slide">
-          <img src="img/carrousel1.jpg" height="1000" width="750" alt="Muestra de maquinas y equipo de trabajo de barberia" />
+          <img src="img/Carrousel-1.jpg" height="1000" width="750" alt="Muestra de maquinas y equipo de trabajo de barberia" />
         </div>
         <div class="slide">
-          <img src="/img/carrousel2.jpg" height="1000" width="750" alt="Muestra de acabado de barba para caballeros" />
+          <img src="/img/Carrousel-2.jpg" height="1000" width="750" alt="Muestra de acabado de barba para caballeros" />
         </div>
         <div class="slide">
-          <img src="/img/carrousel-3.jpg" height="1000" width="750" alt="Muestra de shaver depiladora de cabello para hombres" />
+          <img src="/img/Carrousel-3.jpg" height="1000" width="750" alt="Muestra de shaver depiladora de cabello para hombres" />
         </div>
         <div class="slide">
-          <img src="img/carrousel4.jpg" height="1000" width="750" alt="Atencion al cliente barberia" />
+          <img src="img/Carrousel-4.jpg" height="1000" width="750" alt="Atencion al cliente barberia" />
         </div>
         <div class="slide">
-          <img src="img/carrousel-5.jpg" height="1000" width="750" alt="Muestra de implementos y accesorios de barberia" />
+          <img src="img/Carrousel-5.jpg" height="1000" width="750" alt="Muestra de implementos y accesorios de barberia" />
         </div>
       </div>
     </div>
@@ -113,36 +115,36 @@
 
 <!--INICIO SECCION FOOTER-->
 
-    <footer>
-      <div class="grupo-1">
-        <div class="box">
-          <figure>
-            <a href="/contact.html" title="Redireccionador contacto Mandala"><img class="imagenfooter" src="/img/Logo.png" alt="Logo barberia Mandala"></a>
-          </figure>
-        </div>
-        <div class="box">
-          <h6>SOBRE NOSOTROS</h6>
-          <P>Somos mas que un equipo, somos una familia enfocada en
-            ofrecer confianza y tranquilidad al genero masculino, nuestro establecimiento hace honor a la geometría sagrada 
-            de ahi salió "MANDALA"-BarberShop siendo asi un espacio de calma y relajación un lugar donde nuestros clientes salen renovados.</P>
-          <p>No solo somos una barberia
-            somos un estilo de vida.</p>
-        </div>
-        <div class="box">
-          <h6>SIGUENOS</h6>
-          <div class="redsocial">
-            <a href="https://github.com/Danielgbit/Segunda-pre-entrega-CODER.git" title="Link github personal"><img src="/img/github.png" alt="Icono github"></a>
-            <a href="https://goo.gl/maps/TVYEpce9By96cRbW7" title="Ubicacion barberia Mandala" ><img src="/img/local.png" alt="Icono ubicacion barberia Mandala"></a>
-          </div>
-        </div>
+<footer>
+  <div class="grupo-1">
+    <div class="container-logo">
+      <figure>
+        <a href="/contact.html" title="Redireccionador contacto Mandala"><img class="imagenfooter" src="/img/Logo.png" alt="Logo barberia Mandala"></a>
+      </figure>
+    </div>
+    <div class="box">
+      <h3>SOBRE NOSOTROS</h3>
+      <P>Somos mas que un equipo, somos una familia enfocada en
+        ofrecer confianza y tranquilidad al genero masculino, nuestro establecimiento hace honor a la geometría sagrada 
+        de ahi salió "MANDALA"-BarberShop siendo asi un espacio de calma y relajación un lugar donde nuestros clientes salen renovados.</P>
+      <p>No solo somos una barberia
+        somos un estilo de vida.</p>
+    </div>
+    <div class="box">
+      <h3>SIGUENOS</h3>
+      <div class="redsocial">
+        <a href="https://github.com/Danielgbit/Segunda-pre-entrega-CODER.git" title="Link github personal"><img class="iconos" src="/img/github.png" alt="Icono github"></a>
+        <a href="https://goo.gl/maps/TVYEpce9By96cRbW7" title="Ubicacion barberia Mandala" ><img class="iconos" src="/img/local.png" alt="Icono ubicacion barberia Mandala"></a>
       </div>
-      <div class="grupo-2">
-        <small>&copy; 2022 <b>MANDALA</b> - Todos los derechos resevados.</small>
-      </div>
-    </footer>
-<!--Fin Footer-->
+    </div>
+  </div>
+  <div class="grupo-2">
+    <small>&copy; 2022 <b>MANDALA</b> - Todos los derechos resevados.</small>
+  </div>
+</footer>
+<!--FIN FOOTER-->
 
-<!--Link Boostrap-->
+<!--LINK BOOSTRAP-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   </body>
 </html>

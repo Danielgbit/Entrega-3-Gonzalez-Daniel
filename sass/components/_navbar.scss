@@ -1,5 +1,4 @@
 
-
 :root {
   --background: $bg-primario;
 }
@@ -16,49 +15,65 @@ header {
   background-color: var(--background);
   background-image: url(/img/Imagen-Fondo-2.jpg);
   text-align: center;
-  position: fixed;
+  position:map-get($position, fixed);
   width: 100%;
   height:10vh;
   z-index: 10000;
+
   
 }
 
-.logo {
-  grid-column: 2 / span 1;
-  width: 55px;
-  border-radius: 150px;
-  margin-top: 10px;
+.content-logo-nav{
+  @extend %display-flex;
+
+    .text-logo{
+      padding-top: 25px;
+      @extend %text-center;
+
+    }
+
 }
 
 
-
 .text-logo{
-  @extend %flex-center;
-  margin-left: -330px;
+  
   color: $bg-secundario;
   font-family:$ff-principal;
   font-size: nth($fontsize, 1 );
   @extend %text-decoration;
 
+
     &:hover{
       color: $bg-secundario;
-      text-decoration: line-through;
+      @extend %text-line;
     }
 
 
 
 }
 
+.logo {
+  width: 55px;
+  height: 55px;
+  border-radius: 150px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
 nav {
-  position: absolute;
+  position:map-get($position, absolute );
   text-align: left;
   top: 100%;
   left: 0;
   background: var(--background);
-  width: 100%;
+  @extend %wh-only-porcentaje;
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform .3s ease-in-out .4s;
+  background-color: $bg-primario;
+  
+
+
   
   ul {
     margin: 0;
@@ -71,8 +86,8 @@ nav {
       
       a {
         color: $bg-secundario;
-        text-decoration: none;
-        text-transform: uppercase;
+        @extend %text-decoration;
+        @extend %text-tranform;
         font-size: nth($fontsize, 4 );
         transition: opacity .3s ease-out;
         opacity: 0;
@@ -90,7 +105,7 @@ nav {
 
 .nav-toggle {
   
-  display: none;
+  @extend %display-none;
   
   &:checked ~ nav {
     transform: scale(1, 1);
@@ -102,7 +117,7 @@ nav {
   }
   
   &-label {
-    position: absolute;
+    position:map-get($position, absolute );
     top: 0;
     left: 0;
     margin-left: 1em;
@@ -116,11 +131,11 @@ nav {
       height: 2px;
       width: 2em;
       border-radius: 2px;
-      position: relative;
+      position:map-get($position, relative );
     }
     
     span::before, span::after {
-      position: absolute;
+      position:map-get($position, absolute);
       content: ""
     }
     
@@ -139,39 +154,59 @@ nav {
 }
 
 
-@media only screen and (max-width : 1485px){
 
-header .text-logo{
-    display: none;
-}
+@media screen and (max-width: 846px){
 
-}
-
-@media screen and (min-width: 784px) {
-  .nav-toggle-label {
+  .logo{
     display: none;
   }
-  
+
+  .text-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 80px;
+  }
+
+  .content-logo-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+
+
+
+
+}
+
+@media screen and (min-width: 843px) {
+  .nav-toggle-label {
+    display: none;
+    
+  }
   
 
+  .text-logo{
+    padding-bottom: 25px;
+    padding-left: 10px;
+  }
+
   header {
-    display: grid;
-    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    display: flex;
+    justify-content: space-between;
     
-    .logo {
-      grid-column: 1 / span 1;
-      width: 55px;
-      margin-top: 10px;
-      border-radius: 150px;
-      margin-left: 30px;
-    }
     
+
     nav {
       all: unset;
-      grid-column: 3 / 4;
       display: flex;
       justify-content: flex-end;
       align-items: center;
+      padding-right: 40px;
+      
+    
       
       ul {
         display: flex;
@@ -179,9 +214,10 @@ header .text-logo{
         li {
           margin-bottom: 0;
           margin-left: 3em;
+          
           a {
             opacity: 1;
-            position: relative;
+            position:map-get($position, relative );
             font-weight: bold;
             
             &::before {
@@ -207,3 +243,4 @@ header .text-logo{
     }
   }
 }
+  

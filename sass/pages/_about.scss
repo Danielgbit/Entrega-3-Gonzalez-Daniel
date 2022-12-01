@@ -12,124 +12,234 @@
  a:focus {
      color: $bg-tercero;
      @extend %text-decoration;
+ 
  }
  
- ul {
-     margin: 0;
-     padding: 0;
-     list-style: none;
- }
-
- img {
-@extend %wh-max-100;
-height: auto;
-}
-
-
-
-.title{
-position: relative;
-display: block;
-font-size: nth($fontsize, 7);
-line-height: 24px;
-color: $bg-secundario;
-font-weight: 800;
-margin-bottom: 15px;
-}
-
 
 
 .list-style-one{
-position:relative;
+ position:map-get($position, relative );
 }
+
 
 
 
 .btn-style-one{
-position: relative;
+position:map-get($position, relative );
 display: inline-block;
-font-size: 17px;
+font-size: nth($fontsize, $n:10 );
 line-height: 30px;
 color: $bg-secundario;
-padding: 10px 30px;
+padding: 5px 30px;
 font-weight: 600;
 overflow: hidden;
 letter-spacing: 0.02em;
 background-color: $bg-primario;
-}
+@extend %text-decoration;
+margin-top: 10px;
 
-.btn-style-one:hover{
-background-color: $bg-tercero;
-color: $bg-secundario;
-}
+      &:hover{
+        
+        background-color: $bg-secundario;
+        color: $bg-primario;
+        @extend %text-line;
+        @include animacion;
 
-.about-section{
-position: relative;
-padding: 120px 0 70px;
-}
+      }
 
-
-.about-section .content-column{
-position: relative;
-margin-bottom: 50px;
-}
-
-.about-section .content-column .inner-column{
-position: relative;
-padding-left: 30px;
-}
-
-.about-section .text{
-margin-bottom: 20px;
-font-size: nth($fontsize,9 );
-line-height: 26px;
-color: $bg-secundario;
-font-weight: 400;
-position: relative;
-margin-top: 35px;
-}
-
-
-.about-section .image-column .text-layer{
-position: absolute;
-right: -110px;
-top: 50%;
-font-size: 325px;
-line-height: 1em;
-color: $bg-secundario;
-margin-top: -175px;
-font-weight: 500;
-}
-
-.about-section .image-column .inner-column{
-position: relative;
-padding-left: 80px;
-padding-bottom: 0px;
-}
-
-.about-section .image-column .inner-column:before{
-content: '';
-position: absolute;
-width: calc(50% + 80px);
-height: calc(100% + 160px);
-top: -80px;
-left: -44px;
-background: transparent;
-border: 44px solid $bg-primario
-}
-
-.about-section .image-column .image-1{
-position: relative;
-}
-
-.about-section .image-column .image-1 img{
-box-shadow: 0 30px 50px $bg-primario;
-border-radius: 20px;
 }
 
 
 .body-about{
-  background-image: url(/img/Body-about.jpg);
+  background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+  background-blend-mode: multiply;
 }
 
 
+.about-section {
+
+  position:map-get($position, relative );
+  padding: 120px 0 70px;
+  font-family: $ff-principal;
+
+    .content-column{
+    position:map-get($position, relative );
+    margin-bottom: 50px;
+    padding-top: 30px;
+
+      .inner-column{
+      position:map-get($position, relative );
+      padding-left: 30px;
+      padding-bottom: 0px;
+
+            &::before{
+              position:map-get($position, absolute );
+              width: calc(50% + 80px);
+              height: calc(100% + 160px);
+              top: -80px;
+              left: -44px;
+              background: transparent;
+              border: 44px solid $bg-primario
+            }
+          
+      
+            .title{
+            position:map-get($position, relative );
+            display: block;
+            font-size: nth($fontsize, 7);
+            line-height: 24px;
+            color: $bg-secundario;
+            font-weight: 800;
+            margin-bottom: 15px;
+            }
+      }
+
+    }
+
+    .text{
+      margin-bottom: 20px;
+      font-size: nth($fontsize,9 );
+      line-height: 26px;
+      color: $bg-secundario;
+      font-weight: 400;
+      position:map-get($position, relative );
+      margin-top: 35px;
+      }
+
+      .image-column{
+
+
+        .image-1{
+          position:map-get($position, relative );
+
+                img{
+                box-shadow: 0 30px 50px $bg-primario;
+                border-radius: 20px;
+                @extend %wh-max-100;
+                height: auto;
+                }
+          }
+          
+        
+        .text-layer{
+          position:map-get($position, absolute );
+          right: -110px;
+          top: 50%;
+          font-size: nth($fontsize, 16 );
+          line-height: 1em;
+          color: $bg-secundario;
+          margin-top: -175px;
+          font-weight: 500;
+          }
+          
+      }
+}
+
+
+
+
+/*----------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+.body-team{
+  
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  background-image: linear-gradient(to right, #3f3c33 0%, rgb(0, 0, 0) 100%);
+
+        h2{
+            @extend %flex-center;
+            color: $bg-secundario;
+            font-family: $ff-principal;
+            @extend %text-tranform;
+            font-weight:bolder;
+            padding: 30px;
+        
+        }
+
+        .testimonials {
+          padding: 2rem;
+          @extend %display-space;
+          font-family: $ff-secundaria;
+          padding-bottom: 150px;
+          padding-top: 100px;
+
+              .card{
+                box-shadow: 0 4px 8px 0 transparent(0,0,0,0.2);
+                transition: 0.3s;
+                border-radius: 50px;
+                transition:0.5s all;
+                @extend %flex-quinto;
+                width: 350px;
+                height: 500px;
+                @extend %text-center;
+                padding: 1rem;
+                margin-left: 0.5rem;
+                background-color: $bg-noveno;
+                
+                  &:hover{
+                    box-shadow: 0 8px 16px 0 $bg-primario;
+                    @include animacion;
+                  }
+                
+                span{
+                      font-weight: 200;
+                      font-size: nth($fontsize, 4 );
+                      color: $bg-secundario;
+                      padding-bottom: 20px;
+                      font-style: italic;
+                      @extend %text-line;
+                  }
+
+
+                  .c-title{
+                    color:$bg-secundario;
+                    font-size: nth($fontsize,8 );
+                    justify-self: center;
+                    padding: 2px;
+                    margin-bottom: 0;
+                    font-weight: 600;
+              }
+
+
+              img{
+                height: 200px;
+                width: 200px;
+                border-radius: 90px 10px 10px 10px;
+                @extend %flex-center;
+                margin-left: 60px;
+          
+              
+              }
+
+              .description{
+                    p{
+                      padding: 0;
+                      padding-top: 30px;
+                      font-size: nth($fontsize, 6 );
+                      line-height: 1.3rem;
+                      color: $bg-secundario;
+                      @extend %text-center;
+                      font-family: $ff-principal;
+                  
+                  }
+
+              }
+            }
+      }
+}
+
+
+
+@media  screen and (max-width: 900px){
+  .testimonials{
+    flex-direction: column;
+  }
+  .card{
+    margin-top: 1rem;
+  }
+}

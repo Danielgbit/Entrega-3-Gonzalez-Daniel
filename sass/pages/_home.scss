@@ -5,65 +5,75 @@
 @import '../base/listas/fontsize';
 @import '../base/variables/colors';
 @import '../base/variables/fuentes';
+@import'../base/mixins/mixins';
+@import '../base/mapas/mapas';
 
 
-h3 {
-  padding-top: 10px;
-}
-
-.desc {
-  color: $bg-tercero;
-  padding: 15px;
-}
-.reserva{
-  @extend %text-decoration;
-    color: $bg-secundario;
-    font-size: nth($fontsize , 7 );
-
-    &:hover{
-        text-decoration: line-through;
-        color: $bg-cuarto;
-    }
-}
 
 .icono-shop{
     padding-top: 30px;
     width: 80px;
+    height: 80px;
 }
 
+
 .body-home{
-  background-color: $bg-primario;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
 }
     
 
 
 .heading {
   font-weight: 600;
-  font-size: 200px;
+  font-size: nth($fontsize, 11 );
 }
+
 
 .two-column {
-  display: flex;
+  @extend %display-flex;
   flex-direction: row;
-  margin: 150px 75px;
+  margin-top: 80px;
+  margin-bottom: 130px;
   color: $bg-secundario;
   font-family: $ff-principal;
-}
 
-.two-column div {
-  flex: 1;
-  @extend %flex-center;
-  text-align: center;
-}
+      .imagen {
+        object-fit: contain;
+        @extend %wh-porcentaje-100;
+        padding: 10px;
+        max-width: 854px;
+        max-height: 480px;
+
+        }
+
+      h2 {
+        padding-top: 10px;
+
+        .reserva{
+
+          @extend %text-decoration;
+            color: $bg-secundario;
+            font-size: nth($fontsize , 7 );
+        
+          &:hover{
+                @extend %text-line;
+                color: $bg-cuarto;
+        
+            }
+        }
+      }
+
+      .desc {
+        color: $bg-secundario;
+        padding: 15px;
+      }
 
 
-
-.imagen {
-  object-fit: contain;
-  @extend %wh-porcentaje-100;
-  padding: 10px;
-  max-width: 854px;
-  max-height: 480px;
+      div {
+        flex: 1;
+        @extend %flex-center;
+        @extend %text-center;
+      }
 }
 
 
@@ -72,24 +82,24 @@ h3 {
   
   .heading {
   font-weight: 600;
-  font-size: 5rem;
+  font-size: 5rem ;
  }
 }
+
+
 @media (max-width: 1200px) {
  
   .two-column {
     display: flex;
     flex-direction: column;
     margin: 75px;
+
+      .heading {
+        font-weight: 600;
+        font-size: 4rem;
   } 
-
   
-   .heading {
-  font-weight: 600;
-  font-size: 4rem;
 }
-
-
 
 @media (max-width: 600px) {
 
@@ -98,21 +108,19 @@ h3 {
     padding-top: 50px;
   }
   
-  .heading {
-  font-weight: 600;
-  font-size: 3rem;
-}
-
-  
    .two-column {
    margin: 75px 25px;
+
+      .heading {
+        font-weight: 600;
+        font-size: 3rem;
+      }
+    } 
   } 
-
-
-  
-} 
-
 }
+
+
+/*Animacion Carrousel*/
 
 
 @mixin white-gradient {
@@ -132,7 +140,7 @@ h3 {
 ::after{
     
     height: 100px;
-    position: absolute;
+    position:map-get($position, absolute);
     width: 200px;
     z-index: 2;
     right: 0;
@@ -142,59 +150,34 @@ h3 {
 }
 
 
-
-
 .slider{
     
   background: $bg-secundario;
 	box-shadow: 0 10px 20px -5px $bg-primario;
 	margin: auto;
 	overflow:hidden;
-	position: relative;
+	position:map-get($position, relative );
   animation: 40s;
   @extend %wh-tercero;
     
     .slide-track{
         
-    animation: scroll 40s linear infinite;
-		display: flex;
-		width: calc(250px * 14);
+        animation: scroll 40s linear infinite;
+        display: flex;
+        width: calc(250px * 14);
         
         .slide{
 
             @extend %wh-tercero;
 
             img{
-                @extend %wh-porcentaje-100;
+              @extend %wh-porcentaje-100;
             }
         }
     }
 }
 
-@media screen and (max-width: 520px) {
-    .contenedor-flex1 {
-      flex-direction: column;
-    }
   
-    .imagenfondo {
-      margin-bottom: 0px;
-    }
-  
-    .contenedor-texto-body {
-      flex-direction: row;
-    }
-  
-  }
-  
-  @media screen and (max-width: 600px) {
-    .contenedor-texto-body {
-      padding: 40px;
-    }
-  
-    .imagenfondo  {
-      padding: 0;
-    }
-  }
 
 
 
